@@ -1,0 +1,612 @@
+/* 
+
+font-family: 'Anybody', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Passion One', cursive;
+font-family: 'Poppins', sans-serif;
+
+ */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,300&family=Libre+Baskerville:wght@700&family=Passion+One&family=Poppins:wght@300;400&display=swap');
+
+
+:root {
+
+  --color-text-primary: #ab28ca;
+  --color-text-secundary: #0d1720;
+  --color-text-ter: #485663;
+  --main-color-primary: #9a00bf;
+  --main-color-secundary: #f4d4fb;
+  --background-color: #fafbfe;
+  --lower-text-size: 16px;
+  --tex-tittle: 48px;
+  --text-tittle-card: 24px;
+  --text-tittle-cv2: 20px;
+  --text-paragram: 16px;
+  --font-prin: 'Passion One', cursive;
+  --color-btn-prin: #9a00f9;
+  --color-pri-shadow: 0px 0px 105px 45px rgba(227, 46, 255, 0.9);
+  ;
+  --color-sec-shadow: 0px 0px 105px 45px rgba(236, 172, 32, 0.952);
+  --color-ter-shadow: 0px 10px 30px 10px rgba(46, 255, 196, 0.9);
+  --color-sec: rgb(227, 46, 255);
+  --color-sec-2: rgb(255, 190, 61);
+  ;
+  --color-sec-ter: rgb(46, 255, 196);
+  /* otras variables posibles a utilizar
+        
+        #315579
+font-family: 'Anybody', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Passion One', cursive;
+font-family: 'Poppins', sans-serif;
+
+
+        
+        */
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #000;
+  z-index: -1;
+}
+
+
+
+
+h1 {
+  text-transform: uppercase;
+}
+
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+
+header {
+  align-items: center;
+  padding: 10px;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
+
+.container-header {
+  padding: 0 20px;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  top: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+
+.logo img {
+  margin: 10px;
+  width: 60px;
+}
+
+
+.menu {
+
+  border: 2px solid var(--color-sec-ter);
+  box-shadow: var(--color-ter-shadow);
+  background: var(--color-text-secundary);
+  display: flex;
+  align-items: center;
+}
+
+
+.menu nav {
+  align-items: center;
+  margin: 0 20px;
+}
+
+
+.menu nav ul {
+  padding-top: 20px;
+  align-items: center;
+  display: flex;
+}
+
+.menu nav ul li {
+  padding-top: 30px 0;
+  list-style: none;
+  margin: 0 16px;
+}
+
+
+
+
+.menu nav ul li a {
+
+  text-align: center;
+  color: var(--main-color-secundary);
+  align-items: center;
+  transition: all 200ms ease;
+  font-size: var(--lower-text-size);
+  position: relative;
+}
+
+.social-red a img:hover {
+  padding: 1px;
+}
+
+.menu nav ul li a:hover {
+
+  text-shadow: var(--color-pri-shadow);
+  text-decoration: none;
+  color: var(--color-text-primary);
+
+}
+
+
+.menu .btn-cote {
+  text-align: center;
+  color: var(--background-color);
+  position: relative;
+  transition: all .3s ease;
+  font-weight: 500;
+  background-color: #000;
+  margin: 0 30px;
+  border-radius: 8px;
+  display: block;
+  padding: 10px 30px;
+  border: 3px solid var(--main-color-secundary);
+}
+
+
+
+.menu .btn-cote:hover {
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-btn-prin);
+  background-color: #001a2b;
+  box-shadow: 0 0 30px var(--color-btn-prin);
+  border-color: var(--color-btn-prin);
+}
+
+.menu .btn-cote::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: var(--color-text-secundary);
+
+}
+
+
+.btn-cote span {
+  position: relative;
+  z-index: 1;
+
+}
+
+
+.btn-cote i {
+
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.btn-cote i::before {
+  transform: translateX(-50%);
+  content: '';
+  width: 10px;
+  height: 5px;
+  left: 80%;
+  top: -3.5px;
+  position: absolute;
+  border: 2px solid var(--background-color);
+  background: var(--color-text-secundary);
+  transition: .5s ease;
+}
+
+.btn-cote:hover i::before {
+  border: 3px solid #9a00bf;
+  width: 20%;
+  left: 20%;
+}
+
+
+
+
+.btn-cote i:after {
+
+  transform: translateX(-50%);
+  content: '';
+  width: 10px;
+  height: 5px;
+  left: 20%;
+  bottom: -3.5px;
+  position: absolute;
+  border: 2px solid var(--background-color);
+  background: var(--color-text-secundary);
+  transition: .5s ease;
+}
+
+.btn-cote:hover i::after {
+
+  border: 3px solid #9a00bf;
+  width: 20%;
+  left: 80%;
+}
+
+
+
+
+.menu .social-red {
+
+  margin: 0 10px;
+
+}
+
+
+
+.menu .social-red a {
+  margin: 0 5px;
+}
+
+
+
+.menu .social-red a img {
+  width: 20px;
+}
+
+
+/* contenido container-main presentación */
+
+main {
+  background-clip: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 100px;
+}
+
+.container-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*----------------- portada inicio-------------------- */
+
+
+
+.container-cover {
+  padding: 0;
+}
+
+
+
+.cover {
+  margin-top: 50px;
+  overflow: hidden;
+  background: #001a2b56;
+  padding-left: 50px;
+  border-radius: 12px;
+  max-width: 1400px;
+  padding-top: 30px;
+  max-height: 600px;
+  display: flex;
+  border: 2px solid var(--color-text-ter);
+
+}
+
+
+
+.text-cover {
+  width: 50%;
+  margin: 0 80px;
+  padding: 0 50px;
+}
+
+.text-cover h1 {
+  width: 100%;
+  font-size: 50px;
+  color: var(--main-color-secundary);
+  text-shadow: var(--color-ter-shadow);
+  text-overflow: ellipsis;
+  background: #0d172033;
+  padding: 0 1.5rem;
+}
+
+.text-cover .p-cover {
+  padding: 0;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: 3px solid var(--main-color-primary);
+  background: #0d172000;
+  cursor: pointer;
+  position: relative;
+  font-size: var(--text-paragram);
+  width: 100%;
+}
+
+.p-cover p {
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  margin-top: 40px;
+  color: var(--color-text-ter);
+  width: 100%;
+  padding: 10px;
+}
+
+
+.text-cover .p-cover:hover {
+  border: none;
+}
+
+.text-cover .p-cover p:hover {
+
+  color: var(--color-text-ter);
+  border-radius: 12px;
+  transition: all .1s ease;
+  background: var(--main-color-secundary);
+  ;
+  box-shadow: var(--color-pri-shadow);
+  transform: scale(1.4);
+  overflow: hidden;
+}
+
+
+.text-cover .p-cover:after {
+  border-radius: 50%;
+  box-shadow: var(--color-ter-shadow);
+  animation: movetextdot 9s infinite linear;
+  left: 100%;
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 5px;
+  border: 3px solid var(--color-sec-ter);
+  bottom: -10px;
+}
+
+
+@keyframes movetextdot {
+
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  25% {
+
+    left: 0;
+    top: 100%;
+
+  }
+
+  50% {
+
+    left: 99%;
+    top: 100%;
+
+  }
+
+  75% {
+
+    left: 99%;
+    top: 0;
+
+  }
+
+  100% {
+
+
+    left: 0;
+    top: 0;
+  }
+
+
+
+}
+
+
+
+
+
+.btn-text-cover {
+  display: block;
+  width: 150px;
+  margin-top: 40px;
+  background: var(--main-color-primary);
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  transition: all .3s ease;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+
+
+.btn-text-cover:hover {
+  background: transparent;
+  color: var(--main-color-primary);
+  border: 2px solid var(--main-color-primary);
+
+
+}
+
+.tarjet-cover {
+  padding-top: 100px;
+  width: 50%;
+  max-width: 700px;
+  height: 100%;
+}
+
+
+
+
+
+
+
+/* lado izquierdo de container-main */
+
+
+.tarjet {
+  color: rgb(14, 231, 177);
+  width: 100%;
+  height: 800px;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.overlay-content {
+  z-index: 10;
+  transition: all .7s ease;
+  position: relative;
+  max-width: 800px;
+  height: 600px;
+  top: 0;
+  left: 0;
+}
+
+.infor {
+  background: rgba(209, 209, 209, 0.096);
+  border: 2px double var(--color-sec-ter);
+  color: rgba(4, 34, 17, 0.767);
+  border-radius: 12px;
+  transition: .7s ease;
+  overflow: hidden;
+  max-height: 260px;
+  cursor: text;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.infor:hover {
+  box-shadow: var(--color-sec-shadow);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform: translateY(120px);
+}
+
+
+.container-all {
+  overflow: hidden;
+  transition: all .7s ease;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  color: #bddd;
+  position: absolute;
+}
+
+.container-all:hover {
+  color: var(--main-color-primary);
+  transform: translateY(-100px);
+  height: 1000px;
+}
+
+.parrafoinfor {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+.parrafoinfor p {
+  transform: perspective(80);
+  color: var(--color-sec-ter);
+  margin-bottom: 5px;
+  border-radius: 12px;
+  padding: 1.9rem;
+  background: var(--color-text-ter);
+  transform: translateY(155px);
+}
+
+.th2 {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--text-tittle-card);
+  text-transform: uppercase;
+  transform: perspective(40px);
+  box-shadow: 1px 1px 2px var(--color-text-secundary);
+  border-bottom: 1px solid var(--color-text-secundary);
+  color: var(--color-text-secundary);
+  border-radius: 12px;
+  margin: 0;
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+  background: linear-gradient(120deg, var(--color-text-primary)0%, rgba(253, 29, 29, 0.726) 50%, rgba(236, 172, 32, 0.952)100%);
+}
+
+.nomyfoto {
+  background-color: var(--color-text-secundary);
+  text-transform: uppercase;
+  font-family: 'Passion One', cursive;
+  cursor: pointer;
+  font-weight: 800;
+  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: var(--color-pri-shadow);
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  box-shadow: 2px 1px 1px 2px var(--color-text-secundary);
+  overflow: hidden;
+  margin: 10 0 10px 0;
+  padding-top: 20px;
+}
+
+
+.titulo-ymc {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.titulo-ymc .titcard {
+  margin: 10px;
+  padding: 10px;
+}
+
+
+
+/*------- fin lado izquierdo container main 1ra parte */
